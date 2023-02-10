@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using System.Security.Claims;
+@using UserLoginFeature.Domain.Entities.Identity;
+
+@inject SignInManager<User> SignInManager;
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="dropdown-center dropdown">
+        <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            @User.Claims.SingleOrDefault(claim => claim.Type == ClaimTypes.Name)?.Value
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+            <li>
+                <a class="dropdown-item" href="#">Profile</a>
+            </li>
+            <li>
+                <form class="dropdown-item" asp-controller="/Auth" asp-action="SignOut" method="post" style="display: flex; justify-content: center;">
+                    <button style="width: 90%;" class="btn btn-outline-danger btn-sm" type="submit">Sign Out</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+}
+else
+{
+    <div class="flex-md-row">
+        <a class="btn btn-outline-primary" asp-controller="/Auth" asp-action="SignIn">Sign In</a>
+        <a class="btn btn-outline-success" asp-controller="/Auth" asp-action="SignUp">Sign Up</a>
+    </div>
+}

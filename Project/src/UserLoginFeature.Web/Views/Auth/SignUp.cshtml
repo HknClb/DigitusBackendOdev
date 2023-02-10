@@ -1,0 +1,55 @@
+﻿@using UserLoginFeature.Application.ViewModels;
+@model AuthViewModel
+
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<div class="container-sm container-signup mt-3 bg-body-tertiary rounded">
+    <h4 class="mt-3 mb-3 text-center">Sign Up</h4>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <form class="needs-validation pb-4" asp-controller="/Auth" asp-action="SignUp" method="post" novalidate>
+        <div class="row g-2 mb-3">
+            <span asp-validation-for="SignUp!.Name" class="text-danger text-sm-start"></span><br />
+            <span asp-validation-for="SignUp!.Surname" class="text-danger text-sm-start"></span>
+            <div class="col-md">
+                <div class="form-floating">
+                    <input asp-for="SignUp!.Name" type="text" class="form-control" placeholder="Name">
+                    <label asp-for="SignUp!.Name"></label>                    
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="form-floating">
+                    <input asp-for="SignUp!.Surname" type="text" class="form-control" placeholder="Surname">
+                    <label asp-for="SignUp!.Surname"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="SignUp!.Email" type="email" class="form-control" placeholder="name@example.com">
+            <label asp-for="SignUp!.Email"></label>
+            <span asp-validation-for="SignUp!.Email" class="text-danger text-sm-start"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="SignUp!.Password" type="password" class="form-control" placeholder="Password">
+            <label asp-for="SignUp!.Password"></label>
+            <span asp-validation-for="SignUp!.Password" class="text-danger text-sm-start"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="SignUp!.ConfirmPassword" type="password" class="form-control" placeholder="Confirm Password">
+            <label asp-for="SignUp!.ConfirmPassword"></label>
+            <span asp-validation-for="SignUp!.ConfirmPassword" class="text-danger text-sm-start"></span>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-primary" type="submit">Sign Up</button>
+        </div>
+    </form>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/auth/sign-up.css" />
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

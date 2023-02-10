@@ -1,0 +1,41 @@
+﻿@using UserLoginFeature.Application.ViewModels;
+@model StatsViewModel
+
+@{
+    ViewData["Title"] = "Website Stats";
+}
+
+<div class="container-sm container-stats mt-3">
+    <div class="card text-bg-success mb-3" style="max-width: 18rem;">
+        <div class="card-header text-center">Online Users</div>
+        <div class="card-body">
+            <h3 id="online-users-counter" class="text-light text-center">@Model.WebSiteStats!.OnlineUsers</h3>
+        </div>
+    </div>
+    <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card-header text-center">Registered Users</div>
+        <div class="card-body">
+            <h3 class="text-light text-center">@Model.WebSiteStats.SuccessfullyRegisteredUsersCount</h3>
+        </div>
+    </div>
+    <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+        <div class="card-header text-center">Email Unconfirmed Users</div>
+        <div class="card-body">
+            <h3 class="text-light text-center">@Model.WebSiteStats.EmailUnconfirmedUsersCount</h3>
+        </div>
+    </div>
+    <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+        <div class="card-header text-center">Email Confirmation Average Today</div>
+        <div class="card-body">
+            <h3 class="text-light text-center">@Model.WebSiteStats.AverageConfirmationSeconds</h3>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/stats/stats-website.css" />
+}
+
+@section Scripts {
+    <script src="~/js/stats/website-stats.js"></script>
+}

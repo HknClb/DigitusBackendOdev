@@ -1,0 +1,20 @@
+﻿body > div.container-fluid {
+    height: 85vh;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.container-stats {    
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+    .container-stats > div {
+        width: 22%;
+    }

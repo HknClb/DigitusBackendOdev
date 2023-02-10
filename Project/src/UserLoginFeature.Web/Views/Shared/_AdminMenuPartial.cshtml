@@ -1,0 +1,13 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using System.Security.Claims;
+@using UserLoginFeature.Domain.Entities.Identity;
+
+@inject SignInManager<User> SignInManager;
+@inject UserManager<User> UserManager;
+
+@if (SignInManager.IsSignedIn(User) && await UserManager.IsInRoleAsync(await UserManager.GetUserAsync(User), "Administrator"))
+{
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" asp-controller="/Stats" asp-action="WebSite">Website Stats</a>
+    </li>
+}

@@ -1,0 +1,12 @@
+C:\Users\hkncl\Desktop\Digitus\Project\src\UserLoginFeature.Domain\bin\Debug\net6.0\UserLoginFeature.Domain.deps.json
+C:\Users\hkncl\Desktop\Digitus\Project\src\UserLoginFeature.Domain\bin\Debug\net6.0\UserLoginFeature.Domain.dll
+C:\Users\hkncl\Desktop\Digitus\Project\src\UserLoginFeature.Domain\bin\Debug\net6.0\UserLoginFeature.Domain.pdb
+C:\Users\hkncl\Desktop\Digitus\Project\src\UserLoginFeature.Domain\obj\Debug\net6.0\UserLoginFeature.Domain.csproj.AssemblyReference.cache
+C:\Users\hkncl\Desktop\Digitus\Project\src\UserLoginFeature.Domain\obj\Debug\net6.0\UserLoginFeature.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hkncl\Desktop\Digitus\Project\src\UserLoginFeature.Domain\obj\Debug\net6.0\UserLoginFeature.Domain.AssemblyInfoInputs.cache
+C:\Users\hkncl\Desktop\Digitus\Project\src\UserLoginFeature.Domain\obj\Debug\net6.0\UserLoginFeature.Domain.AssemblyInfo.cs
+C:\Users\hkncl\Desktop\Digitus\Project\src\UserLoginFeature.Domain\obj\Debug\net6.0\UserLoginFeature.Domain.csproj.CoreCompileInputs.cache
+C:\Users\hkncl\Desktop\Digitus\Project\src\UserLoginFeature.Domain\obj\Debug\net6.0\UserLoginFeature.Domain.dll
+C:\Users\hkncl\Desktop\Digitus\Project\src\UserLoginFeature.Domain\obj\Debug\net6.0\refint\UserLoginFeature.Domain.dll
+C:\Users\hkncl\Desktop\Digitus\Project\src\UserLoginFeature.Domain\obj\Debug\net6.0\UserLoginFeature.Domain.pdb
+C:\Users\hkncl\Desktop\Digitus\Project\src\UserLoginFeature.Domain\obj\Debug\net6.0\ref\UserLoginFeature.Domain.dll

@@ -1,0 +1,43 @@
+﻿@using UserLoginFeature.Application.ViewModels;
+@model AuthViewModel
+
+@{
+    ViewData["Title"] = "Sign In";
+    TempData["UserId"] = Model.ConfirmEmail!.Id;
+}
+
+<div class="container-sm container-confirmemail">
+    <form class="content-area" asp-controller="/Auth" asp-action="ConfirmEmail" method="post" onsubmit="onSubmit(event)">
+        <h4>Verify Your Email</h4>
+        <h5>Welcome Back!</h5>
+        <p>
+            It looks like you're trying to confirm your email.
+            As an added security mesure, please enter the 6-character code sent to your email.
+        </p>
+        <fieldset class='number-code'>
+            <legend>Confirmation Code</legend>
+            <div>
+                <input name='code' class='code-input' required />
+                <input name='code' class='code-input' required />
+                <input name='code' class='code-input' required />
+                <input name='code' class='code-input' required />
+                <input name='code' class='code-input' required />
+                <input name='code' class='code-input' required />
+            </div>
+        </fieldset>
+        <p><a style="cursor: pointer;" onclick="resendConfirmation(event)">Resend Code</a></p>
+        <button type="submit" class="btn-confirm">Confirm</button>
+        <input id="user-id" asp-for="ConfirmEmail!.Id" />
+        <input id="verification-code" asp-for="ConfirmEmail!.Code" />
+    </form>
+
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/auth/confirm-email.css" />
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/auth/confirm-email.js"></script>
+}

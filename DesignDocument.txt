@@ -1,0 +1,85 @@
+User Login Feature - Hakan ÇELEBİ
+
+- Backend
+Language: C#
+Framework: .NET 6
+Architecture: Onion Architecture
+Patterns: CQRS and Mediator Pattern, Repository Pattern, Service Layer Design Pattern, Decorator Pattern, MVC Pattern
+Database: MSSQL
+ORM: EF Core
+Extra: ADO.NET
+Authentication Method: Cookie Authentication
+3th Party Libraries: 
+	- MediatR (For CQRS Pattern)
+	- AutoMapper (Mapping Operations)
+	- Fluent Validation (Command/Query Validations)
+	- Micrisoft Identity (Authorize and Authentication Operations)
+	- SignalR (Counting Online Users)
+	- EF Core (ORM Tool)
+Projects: 
+	- Web MVC Project
+	- Domain Project (Domain/Core Layer)
+	- Application Project (Application/Business Layer)
+	- Infrastructure Layer (Infrastructure/Persistence/DAL Layer)
+
+- Frontend
+Markup: HTML
+Style: CSS
+Script: Javascript
+Libraries: JQuery, Bootstrap 5.3, SignalR
+
+Workflows
+- Register User:
+	Step 1: After the user has entered the required information, click the register button.
+	Step 2: The user copies the verification code from the mail that the system then sends and then clicks confirm.
+
+- User login:
+	Step 1: User entered a valid email and password
+	Step 2: User Login
+
+- Forgot User Password
+	Step 1: The user clicked the forgot password link to redirect to the forgot password page.
+	Step 2: User entered account email and clicked submit button.
+	Step 3: The user clicked the link in the e-mail sent by the system.
+	Step 4: User entered the new Password
+
+Test Scenarios
+
+- Login
+	* Check system behavior when valid email and password is entered.
+	* Check system behavior when invalid email and valid password is entered.
+	* Check system behavior when valid email and invalid password is entered.
+	* Check system behavior when invalid email and invalid password is entered.
+	* Check system behavior when email and password are left blank and Sign in entered.
+	* Check Forgot your password is working as expected
+	* Check system behavior when valid/invalid password is entered.
+
+- Register
+	* Check system behavior when valid email and password is entered.
+	* Check system behavior when invalid email and valid password is entered.
+	* Check system behavior when valid email and invalid password is entered.
+	* Check system behavior when invalid email and invalid password is entered.
+	* Check system behavior when name, surname, email, password and confirm password are left blank and Sign up entered.
+	* Check system behavior when valid/invalid password.
+
+- Confirm Email
+	* Check system behavior when invalid verification code is entered.
+	* Check system behavior when valid verification code is entered.
+	* Check resend code is working as expected.
+	* Check system behavior when verification code is left blank and Confirm entered.
+
+* Reset Password
+	* Check system behavior when valid/invalid email.
+	* Check system behavior when email is left blank and Reset Password entered.
+
+* Reset Password Email Sent
+	* Check resend code is working as expected.
+
+* New Password
+	* Check system behavior when valid/invalid password.
+	* Check system behavior when password and confirm password are not matching.
+	* Check system behavior when password and confirm password are left blank and Sign up entered.
+
+
+
+
