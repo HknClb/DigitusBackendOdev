@@ -36,6 +36,12 @@ namespace UserLoginFeature.Infrastructure
             }).AddEntityFrameworkStores<BaseDbContext>().AddDefaultTokenProviders();
             services.AddTransient<CustomEmailConfirmationTokenProvider<User>>();
 
+            services.ConfigureApplicationCookie(configure =>
+            {
+                configure.LoginPath = "/Auth/SignIn";
+                configure.AccessDeniedPath = "/";
+            });
+            
             services.AddScoped<IAccountVerificationReadRepository, AccountVerificationReadRepository>();
             services.AddScoped<IAccountVerificationWriteRepository, AccountVerificationWriteRepository>();
 
